@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagina03</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button href = "/home" expand = "block" shape = "round">
+    Home!
+  </ion-button><br>
+
+  <ion-list>
+    <ion-buttons end>
+      <button ion-button (click)="addNote()"><ion-icon name="add"></ion-icon>Adicionar Nota</button>
+    </ion-buttons>
+    <ion-item-sliding *ngFor="let note of notes"> 
+      <ion-item>
+        {{note.title}}
+      </ion-item>
+      <ion-item-options>
+        <button ion-button icon-only (click)="editNote(note)" light>
+          <ion-icon name="paper"></ion-icon>
+        </button>
+        <button ion-button icon-only (click)="deleteNote(note)" danger>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>  
+  </ion-list>
+
+  <br><br>
+
+  <ion-grid>
+    <ion-row *ngFor = "let livro of livros">
+      <ion-col>{{livro}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor = "let cor of cores">{{cor}}</ion-item>
+  </ion-list>
+
+  <ion-list *ngFor = "let supercor of supercores">
+    <ion-item>Cor: {{supercor.nome}} <ion-badge slot = "end">{{supercor.numero}}</ion-badge></ion-item>
+  </ion-list>
+  <br>
+  <ion-label>Adicionar Livros:</ion-label><br>
+  <ion-input ([ngModel]) = "entra"></ion-input>
+  <ion-label>Deletar Livros:</ion-label><br>
+  <ion-input ([ngModel]) = "sai"></ion-input>
+  <ion-label>Altera Livros:</ion-label><br>
+  <ion-input ([ngModel]) = "edita"></ion-input>
+
+
+</ion-content>

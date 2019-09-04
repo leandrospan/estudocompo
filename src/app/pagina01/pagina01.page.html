@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar class="jolly-toolbar">
+      <ion-title>
+        Ionic Blank
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+    <ion-button size="large" class="jolly-btn" shape="round" href = "/home" >
+      Home!
+    </ion-button><br>
+
+    <!--
+  <ion-virtual-scroll [items]="listaDeDados">
+      <ion-item *virtualItem="let item">
+        {{ item }}
+      </ion-item>
+    </ion-virtual-scroll>
+   
+   
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="carregarDados($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Carregando mais dados...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+    -->
+    <ion-button size="large" class="jolly-btn" shape="round" (click) = "vai()" >
+      VAI!!!
+    </ion-button><br>
+    <ion-label>{{dolar}}</ion-label><br>
+    <ion-label>{{infoBruta3}}</ion-label><br>
+    <ion-label></ion-label><br>
+    <ion-label></ion-label><br>
+</ion-content>

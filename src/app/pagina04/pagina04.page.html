@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>pagina04</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-label class = "centraliza">...:: LOGIN ::...</ion-label><br><br>
+  <ion-label>Usuário:</ion-label>
+  <ion-input ([ngModel]) = "u" name = "User"></ion-input>
+  <ion-label>Senha:</ion-label>
+  <ion-input ([ngModel]) = "s" name = "Pass"></ion-input>
+  <ion-button>ENTRAR</ion-button><br>
+  <ion-button (click) = "verificaLogin()">VERIFICA</ion-button><br>
+  <ion-button (click) = "cadastraUsuario()">CADASTRAR</ion-button><br>
+  <ion-label>{{teste}}</ion-label><br>
+  <ion-label></ion-label>
+  <ion-grid style="height: 100%">
+    <ion-row justify-content-center align-items-center style="height: 100%; flex-direction: column">
+      <ion-spinner name="ios"></ion-spinner>
+      Carregando...
+    </ion-row>
+    <ion-row style="height: 100%; flex-direction: column">
+      <p>List item 1</p>
+      <p>List item 2</p>
+      <p>List item 3</p>
+      <p>List item 4</p>
+      <p>List item 5</p>
+      <p>List item 6</p>
+    </ion-row>
+  </ion-grid>
+</ion-content>
