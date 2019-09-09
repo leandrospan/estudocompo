@@ -14,7 +14,7 @@
       <ion-col>
         <ion-item>
           <ion-label position = "floating"><ion-icon name = "mail"> </ion-icon> E-mail:</ion-label>
-          <ion-input></ion-input>      
+          <ion-input [(ngModel)] = "usuario"></ion-input>      
         </ion-item>
       </ion-col>
     </ion-row>
@@ -22,34 +22,29 @@
       <ion-col>
         <ion-item>
           <ion-label position = "floating"><ion-icon name = "lock"> </ion-icon> Senha:</ion-label>
-          <ion-input></ion-input>      
+          <ion-input [(ngModel)] = "senha"></ion-input>      
         </ion-item>
       </ion-col>
     </ion-row>
   </ion-grid>
   
-  <ion-button href = "/pagina01" expand = "block" shape = "round">
-    Página 01!
+  <ion-button (click) = "verificaUsuario()" expand = "block" shape = "round">
+    ENTRAR
   </ion-button>
-  <ion-button href = "/pagina02" expand = "block" shape = "round">
-    Página 02!
-  </ion-button>
-  <ion-button href = "/pagina03" expand = "block" shape = "round">
-    Página 03!
-  </ion-button>  
-  <ion-button href = "/pagina04" expand = "block" shape = "round">
-    Página 04!
-  </ion-button> 
   <ion-label class = "centro">Ou entre através das redes sociais:</ion-label><br>
-
-  <ion-button shape = "round" class = "centrob">
-    <ion-icon name = "logo-facebook"></ion-icon>
-  </ion-button>
-  <ion-button shape = "round" class = "centrob">
-    <ion-icon name = "logo-twitter"></ion-icon>
-  </ion-button>
-  <ion-button shape = "round" class = "centrob">
-    <ion-icon name = "logo-instagram"></ion-icon>
-  </ion-button>
-
+  <ion-grid class = "centro">
+    <ion-row>
+      <ion-col>
+        <ion-button shape = "round">
+          <ion-icon name = "logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button shape = "round">
+          <ion-icon name = "logo-twitter"></ion-icon>
+        </ion-button>
+        <ion-button shape = "round">
+          <ion-icon name = "logo-instagram"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

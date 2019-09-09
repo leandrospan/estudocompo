@@ -8,6 +8,8 @@ const routes: Routes = [
   { path: 'pagina02', loadChildren: './pagina02/pagina02.module#Pagina02PageModule' },
   { path: 'pagina03', loadChildren: './pagina03/pagina03.module#Pagina03PageModule' },
   { path: 'pagina04', loadChildren: './pagina04/pagina04.module#Pagina04PageModule' },
+  { path: 'pagina05', loadChildren: './pagina05/pagina05.module#Pagina05PageModule' },
+  { path: 'editar-produto', loadChildren: './editar-produto/editar-produto.module#EditarProdutoPageModule' },
 ];
 
 @NgModule({

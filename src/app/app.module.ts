@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
 
@@ -13,6 +13,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CorreioService } from '../app/correio.service';
 import { ArmazenamentoService } from '../app/services/armazenamento.service';
 import { IonicStorageModule } from '@ionic/storage';
+//import { SQLiteOriginal } from '@ionic-native/sqlite';
+//import { SQLitePorter } from '@ionic-native/sqlite-porter';
+import { SQLite } from '@ionic-native/sqlite/ngx';
 
 
 @NgModule({
@@ -23,14 +26,18 @@ import { IonicStorageModule } from '@ionic/storage';
     IonicModule.forRoot(), 
     AppRoutingModule, 
     HttpClientModule, 
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    // SQLiteOriginal,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     CorreioService,
     ArmazenamentoService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    SQLite,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    // Grande sacada para formatar numeros e datas no formato brasileiro
+    {provide: LOCALE_ID, useValue: 'pt-BR'}
   ],
   bootstrap: [AppComponent]
 })
