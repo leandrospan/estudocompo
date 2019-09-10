@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
+/*
 import { IonInfiniteScroll, IonVirtualScroll } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { CorreioService } from '../correio.service';
+*/
+
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-pagina01',
@@ -10,7 +14,81 @@ import { CorreioService } from '../correio.service';
   styleUrls: ['./pagina01.page.scss'],
 })
 export class Pagina01Page implements OnInit {
+
+  public dadoParaArmazenar;
+  public usuario;  
+  public senha: string;
+  public nome: string;
+  public idade: number;
+  public saida;
+
+  constructor(public armazenamento: Storage){ }
+
+  public adicionarUsuario() {
+    // this.armazenamento.set(chave , dado a ser armazenado)
+    this.armazenamento.set("usu", this.usuario = {
+      user: this.nome,
+      pass: this.senha
+    });
+  }
+
+  public mostrarUsuario(){
+    this.saida = this.armazenamento.get("usu");
+  }
+
+  setValue(){
+    this.armazenamento.set("ni",this.dadoParaArmazenar = {
+      nome: this.nome,
+      idade: this.idade
+    }).then((successData)=>{
+      console.log("Dado Armazenado");
+      console.log(successData);
+    });
+  }
+
+  getValue(){
+    this.armazenamento.get("ni").then((data)=>{
+      console.log(data);
+    });
+  }
+
+  /*
+  public set(setting, value){
+    return this.armazenamento.set('setting:${ settingName }', value);
+  }
+
+  public async get(settingName){
+    return await this.armazenamento.get('setting:${ settingName }');
+  }
+
+  public async remove(settingName){
+    return await this.armazenamento.remove('setting:${ settingName }');
+  }
+
+  public clear() {
+    this.armazenamento.clear().then(() => {
+      console.log('all keys cleared');
+    });
+  }
+
+  */
+
+  /*
+  setValue(){
+    this.armazenamento.set("objeto",this.dadoParaArmazenar).then((successData)=>{
+      console.log("Dado Armazenado");
+      console.log(successData);
+    })
+  }
+
+  getValue(){
+    this.armazenamento.get("objeto").then((data)=>{
+      console.log(data);
+    })
+  }
+  */
   
+  /*
   infiniteScroll: IonInfiniteScroll;
   virtualScroll: IonVirtualScroll;
  
@@ -77,7 +155,8 @@ public pega(): any {
 public pega2(): any {
   return this.dolar = this.correio.pegaDados().value.cotacaoCompra;
 }
- 
+  */
+
   ngOnInit() {
   }
 

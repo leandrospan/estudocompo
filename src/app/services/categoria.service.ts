@@ -10,6 +10,7 @@ export class CategoriaService {
 
   constructor(private bdService: BancodedadosService) { }
  
+  /*
   public getAll() {
     return this.bdService.getBD()
     .then((bd: SQLiteObject) => {
@@ -31,4 +32,5 @@ export class CategoriaService {
     })
     .catch((e) => console.error(e));
   }
+  */
 }

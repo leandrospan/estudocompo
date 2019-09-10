@@ -18,6 +18,8 @@ export class Pagina05Page implements OnInit {
     public navCtrl: NavController, 
     private toast: ToastController, 
     private produtoService: ProdutosService) { }
+
+    /*
  
   ionViewDidEnter() {
     this.getAllProdutos();
@@ -52,6 +54,7 @@ export class Pagina05Page implements OnInit {
     this.getAllProdutos();
   }
  
+  */
 
   ngOnInit() {
   }

@@ -7,11 +7,34 @@
   </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label position = "floating"><ion-icon name = "man"> </ion-icon> Nome:</ion-label>
+    <ion-input [(ngModel)] = "nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position = "floating"><ion-icon name = "person"> </ion-icon> Idade:</ion-label>
+    <ion-input [(ngModel)] = "idade" type = "number"></ion-input>
+  </ion-item><br>
+    <ion-button (click)="setValue()">Set</ion-button><br>
+    <ion-button (click)="getValue()">Get</ion-button><br>
+    <br>
+  <ion-item>
+    <ion-label position = "floating"><ion-icon name = "man"> </ion-icon>Usuário:</ion-label>
+    <ion-input [(ngModel)] = "nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position = "floating"><ion-icon name = "person"> </ion-icon>Senha:</ion-label>
+    <ion-input [(ngModel)] = "senha"></ion-input>
+  </ion-item><br>
+  <ion-button (click)="adicionarUsuario()">Adicionar Usuário</ion-button>
+  <ion-button (click)="mostrarUsuario()">Mostrar Usuário</ion-button><br>
+  <ion-label>{{saida}}</ion-label>
+  <!--
     <ion-button size="large" class="jolly-btn" shape="round" href = "/home" >
       Home!
     </ion-button><br>
 
-    <!--
+  
   <ion-virtual-scroll [items]="listaDeDados">
       <ion-item *virtualItem="let item">
         {{ item }}
@@ -25,7 +48,7 @@
         loadingText="Carregando mais dados...">
       </ion-infinite-scroll-content>
     </ion-infinite-scroll>
-    -->
+  
     <ion-button size="large" class="jolly-btn" shape="round" (click) = "vai()" >
       VAI!!!
     </ion-button><br>
@@ -33,4 +56,5 @@
     <ion-label>{{infoBruta3}}</ion-label><br>
     <ion-label></ion-label><br>
     <ion-label></ion-label><br>
+  --> 
 </ion-content>

@@ -27,7 +27,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-
+      /*
       //Criando o banco de dados
       this.bdService.criaBancoDeDados()
         .then(() => {
@@ -37,7 +37,8 @@ export class AppComponent {
             .catch(() => {
               // ou se houver erro na criação do banco
               this.openHomePage(this.splashScreen);
-            });
+            }); 
+      */
     });
   }
 

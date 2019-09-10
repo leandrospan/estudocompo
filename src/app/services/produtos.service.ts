@@ -10,6 +10,7 @@ export class ProdutosService {
 
   constructor(private bdService: BancodedadosService) { }
  
+  /*
   public inserir(produto: Produto) {
     return this.bdService.getBD()
       .then((bd: SQLiteObject) => {
@@ -103,6 +104,7 @@ export class ProdutosService {
       })
       .catch((e) => console.error(e));
   }
+  */
 }
  
 export class Produto {

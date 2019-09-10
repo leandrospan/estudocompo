@@ -17,7 +17,7 @@ export class EditarProdutoPage implements OnInit {
     public navCtrl: NavController, public navParams: NavParams,
     private toast: ToastController, private produtosService: ProdutosService,
     private categoriaService: CategoriaService) {
- 
+  /*
     this.modelo = new Produto();
  
     if (this.navParams.data.id) {
@@ -26,11 +26,14 @@ export class EditarProdutoPage implements OnInit {
           this.modelo = resultado;
         })
     }
+    */
   }
  
   /**
    * Roda quando a página é carregada
    */
+
+   /*
   ionViewDidLoad() {
     this.categoriaService.getAll()
       .then((resultado: any[]) => {
@@ -59,6 +62,8 @@ export class EditarProdutoPage implements OnInit {
       return this.produtosService.inserir(this.modelo);
     }
   }
+
+  */
 
   ngOnInit() {
   }

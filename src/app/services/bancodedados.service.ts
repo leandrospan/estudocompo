@@ -11,6 +11,7 @@ export class BancodedadosService {
 
   constructor(private sqlite: SQLite) { }
 
+  /*
   //Cria um banco caso não exista um
   public getBD() {
     return this.sqlite.create({
@@ -60,4 +61,6 @@ export class BancodedadosService {
     })
     .catch(e => console.error('Erro ao consultar a quantidade de categorias', e));
   }
+
+  */
 }
